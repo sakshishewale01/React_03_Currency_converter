@@ -1,0 +1,22 @@
+import { useEffect, useState } from "react";
+
+function useCurrencyInfo(currency) {
+  const [data, setData] = useState({});
+
+  useEffect(() => {
+    fetch(
+      `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency.toLowerCase()}.json`
+    )
+      .then((response) => response.json())
+      .then((result) => {
+        setData(result[currency.toLowerCase()]);
+      })
+      .catch((error) => {
+        console.log("Currency API Error:", error);
+      });
+  }, [currency]);
+
+  return data;
+}
+
+export default useCurrencyInfo;
