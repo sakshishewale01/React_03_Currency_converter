@@ -31,7 +31,7 @@ This project helped me understand **React Hooks, Custom Hooks, API integration, 
 
 `useState` is used to store values that change during the application.
 
-```javascript
+javascript
 const [amount, setAmount] = useState(1);
 const [from, setFrom] = useState("USD");
 const [to, setTo] = useState("INR");
