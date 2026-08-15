@@ -47,7 +47,4 @@ npm install
 npm run dev
 ```
 
-## 👩‍💻 Author
-
-**Sakshi Shewale**
 
